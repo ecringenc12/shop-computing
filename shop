@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int en[3];
+	int boy[3];
+	int h[3];
+	int i;
+	int desi[3];
+	for(i=0;i<=2;i++)
+	{
+		printf("%d. urunun en gir-> ",i+1);
+		scanf("%d",&en[i]);
+		printf("%d. urunun boy gir-> ",i+1);
+		scanf("%d",&boy[i]);
+		printf("%d. urunun yukseklik gir-> ",i+1);
+		scanf("%d",&h[i]);
+	}
+	for(i=0;i<=2;i++)
+	{
+		desi[i]=(en[i]*boy[i]*h[i])/3000;
+		if(desi[i]<=1)
+		{
+			printf("Urununuz desi si 1 dir\n");
+		}
+		if(desi[i]<=10)
+		{
+			printf("Kargo ucretiniz 100TL\n");
+		}
+		if(desi[i]>10)
+		{
+			
+			printf("Kargo ucretiniz %d dir\n",(150+((desi[i]-10)*15)));
+		}
+	}
+
+	return 0;
+} dogru mu
